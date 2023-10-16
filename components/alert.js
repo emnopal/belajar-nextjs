@@ -16,6 +16,7 @@ export default function Alert({ children, type }) {
 			className={clsx({
 				[styles.success]: type === "success",
 				[styles.error]: type === "error",
+				[styles.warn]: type === "warn" || type === "warning",
 			})}
 		>
 			{children}

@@ -1,7 +1,8 @@
-import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script"; // add third party script eg. from cdn
 import Layout from '../../components/layout'; // add components
+import DateParse from "../../components/date";
+import utilStyles from "../../styles/utils.module.scss";
 
 export default function FirstPost() {
 	return (
@@ -19,10 +20,14 @@ export default function FirstPost() {
 					)
 				}
 			/>
-			<h1>First Post</h1>
-			<h2>
-				<Link href="/">Back to home</Link>
-			</h2>
+			<h1 className={utilStyles.headingXl}>My First Post</h1>
+			<div className={utilStyles.lightText}>
+				<DateParse dateString="2023-10-16"/>
+			</div>
+			<br/>
+			<div>
+				This is my first post
+			</div>
 		</Layout>
 	);
 }
